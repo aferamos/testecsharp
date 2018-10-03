@@ -1,0 +1,50 @@
+﻿@model Matamata.Models.Quarta
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Quarta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeD)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdSelecao }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

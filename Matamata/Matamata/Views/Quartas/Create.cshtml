@@ -1,0 +1,80 @@
+﻿@model Matamata.Models.Quarta
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<table class="form-control" cellpadding="20">
+
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <tr>
+        <th>
+            @Html.LabelFor(model => model.NomeA, htmlAttributes: new { @class = "control-label col-md-2" })
+        </th>
+        <th>
+            @Html.DisplayName("x")
+        </th>
+        <th>
+            @Html.LabelFor(model => model.NomeB, htmlAttributes: new { @class = "control-label col-md-2" })
+        </th>
+    </tr>
+    <tr>
+        <td>
+            @Html.EditorFor(model => model.NomeA, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.NomeA, "", new { @class = "text-danger" })
+        </td>
+        <td>
+            @Html.DisplayName("x")
+        </td>
+        <td>
+            @Html.EditorFor(model => model.NomeB, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.NomeB, "", new { @class = "text-danger" })
+        </td>
+    </tr>
+    <tr>
+        <th>
+            @Html.LabelFor(model => model.NomeC, htmlAttributes: new { @class = "control-label col-md-2" })
+        </th>
+        <th>
+            @Html.DisplayName("x")
+        </th>
+        <th>
+            @Html.LabelFor(model => model.NomeD, htmlAttributes: new { @class = "control-label col-md-2" })
+        </th>
+    </tr>
+    <tr>
+        <td>
+            @Html.EditorFor(model => model.NomeC, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.NomeC, "", new { @class = "text-danger" })
+        </td>
+        <td>
+            @Html.DisplayName("x")
+        </td>
+        <td>
+            @Html.EditorFor(model => model.NomeD, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.NomeD, "", new { @class = "text-danger" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+          <input type="submit" value="Create" class="btn btn-default" />
+        </td>
+    </tr>
+
+</table>
+}
+
+
+    <div class="form-horizontal">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    
